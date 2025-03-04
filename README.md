@@ -13,6 +13,8 @@ This project consists of multiple **gRPC-based microservices** for **face detect
 
 ## **🛠 Installation & Setup**
 
+### **1️⃣ Requirement files
+
 Download the necessary models:
 
 - shape_predictor_68_face_landmarks.dat
