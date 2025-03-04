@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+      - "6379:6379"
+    restart: always
+
+  grpc_face_processing:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: grpc_face_processing
+    depends_on:
+      - redis
+    ports:
+      - "50051:50051"
+      - "50052:50052"
+      - "50053:50053"
+      - "50054:50054"
+    environment:
+      - REDIS_HOST=redis
+    restart: always
