@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package face_landmark;
+
+service FaceLandmark {
+  rpc DetectLandmarks (LandmarkRequest) returns (LandmarkResponse);
+}
+
+message LandmarkRequest {
+  bytes image_data = 1;
+}
+
+message LandmarkResponse {
+  string image_hash = 1;
+}
