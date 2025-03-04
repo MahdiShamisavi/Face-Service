@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package aggregator;
+
+service Aggregator {
+  // Saves face attributes using data stored in Redis.
+  rpc SaveFaceAttributes (FaceAttributesRequest) returns (FaceResultResponse);
+}
+
+message FaceAttributesRequest {
+  string time = 1;
+  bytes frame = 2; 
+  string redis_key = 3;
+}
+
+message FaceResultResponse {
+  bool response = 1;
+}

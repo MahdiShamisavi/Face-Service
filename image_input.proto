@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package image_input;
+
+service ImageInput {
+  rpc ProcessImage (ImageRequest) returns (ImageResponse);
+}
+
+message ImageRequest {
+  bytes image_data = 1;
+}
+
+message ImageResponse {
+  string message = 1;
+}
