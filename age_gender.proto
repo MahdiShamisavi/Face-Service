@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package age_gender;
+
+service AgeGender {
+  // Receives an image and returns the image hash
+  rpc EstimateAgeGender (ImageRequest) returns (AgeGenderResponse);
+}
+
+message ImageRequest {
+  bytes image_data = 1;
+}
+
+message AgeGenderResponse {
+  string image_hash = 1;
+}
