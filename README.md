@@ -77,3 +77,11 @@ To send an image for processing, use the `image_input_client.py` script:
 ```bash
 python image_input_client.py path/to/image.jpg
 ```
+
+## **🔹 Docker**
+
+docker-compose build --no-cache
+
+
+docker-compose up -d
+
